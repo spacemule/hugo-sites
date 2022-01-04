@@ -12,7 +12,7 @@ paginate = 5
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = false
@@ -96,3 +96,9 @@ paginate = 5
         name = "Zahava is Cool"
         url = "https://zahava-is.cool"
 	weight = 160
+      [[languages.en.menu.main]]
+        identifier = "obs"
+        name = "OBS Project"
+        url = "https://build.opensuse.org/project/subprojects/home:spacemule"
+        weight = 130
+
