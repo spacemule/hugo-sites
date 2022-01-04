@@ -15,11 +15,11 @@ One of the things I missed the most from my Debian/Ubuntu days when I switched t
 
 To be clear, what I want is to have my computers use apt-cacher-ng as a proxy when available to download packages. When it's unavailable either due to downtime, a bug, or me being on a different network, I want zypper to default to the standard repos.
 
-I tried to find the proper way to do this on openSUSE. I asked on reddit and telegram, but found no reasonable solutions. I tried creating a transparent caching proxy with squid and some iptables rules, but due to zypper downloading from multiple repositories simultaneously, it needed a lot of hacks to cache the rpms properly. I wasn't willing to risk a duct-taped together solution that could break any day. I tried writing a service for libzypp, but found the documentation unclear and lacking useful examples. Finally, I found a solution so simple I'm surprised I haven't seen it published elsewhere.
+I tried to find the proper way to do this on openSUSE. I asked on reddit and telegram, but I found no reasonable solutions. I tried creating a transparent caching proxy with squid and some iptables rules, but due to zypper downloading from multiple repositories simultaneously, it needed a lot of hacks to cache the rpms properly. I wasn't willing to risk a duct-taped together solution that could break any day. I tried writing a service for libzypp, but found the documentation unclear and lacking useful examples. Finally, I found a solution so simple I'm surprised I haven't seen it published elsewhere.
 
 After playing with this for a few months on and off I wondered what the spec actually requires of a `.repo` file, and I found [this gem on SUSE's site](https://www.suse.com/support/kb/doc/?id=000019926). You can specify more than one `baseurl`, and their order sets their priority. I looked at the [manpage for zypper](https://www.mankier.com/8/zypper#Commands-Supported_URI_formats) and found that a proxy can be defined in the URI.
 
-The solution is as simple as editing the repo file and adding a `baseurl` before the others pointing to apt-cacher-ng. For reference, here's one of my `.repo` files:
+The solution is as simple as editing the repo file and adding a `baseurl` point to apt-cacher-ng  before the default `baseurl`. For reference, here's one of my `.repo` files:
 
 ```
 [repo-oss]
