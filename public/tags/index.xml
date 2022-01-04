@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on spacemule.net</title>
+    <link>https://spacemule.net/tags/</link>
+    <description>Recent content in Tags on spacemule.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jan 2022 15:53:06 +0200</lastBuildDate><atom:link href="https://spacemule.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>apt-cacher-ng</title>
+      <link>https://spacemule.net/tags/apt-cacher-ng/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/apt-cacher-ng/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>caching proxy</title>
+      <link>https://spacemule.net/tags/caching-proxy/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/caching-proxy/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://spacemule.net/tags/linux/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>openSUSE</title>
+      <link>https://spacemule.net/tags/opensuse/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/opensuse/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>

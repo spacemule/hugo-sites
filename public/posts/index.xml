@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on spacemule.net</title>
+    <link>https://spacemule.net/posts/</link>
+    <description>Recent content in Posts on spacemule.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jan 2022 15:53:06 +0200</lastBuildDate><atom:link href="https://spacemule.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple repository caching on openSUSE</title>
+      <link>https://spacemule.net/posts/repo-cache/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/posts/repo-cache/</guid>
+      <description>One of the things I missed the most from my Debian/Ubuntu days when I switched to openSUSE about a year ago was apt-cacher-ng with proxy autodiscovery. I had apt-cacher-ng running on one computer at home, and all of my containers, VMs, and laptops would use that proxy when they were on the home network. Even better, they&amp;rsquo;d seemlessly switch back to the default repos if the proxy was unavailable.
+To be clear, what I want is to have my computers use apt-cacher-ng as a proxy when available to download packages.</description>
+      <content>&lt;p&gt;One of the things I missed the most from my Debian/Ubuntu days when I switched to openSUSE about a year ago was apt-cacher-ng with proxy autodiscovery. I had apt-cacher-ng running on one computer at home, and all of my containers, VMs, and laptops would use that proxy when they were on the home network. Even better, they&amp;rsquo;d seemlessly switch back to the default repos if the proxy was unavailable.&lt;/p&gt;
+&lt;p&gt;To be clear, what I want is to have my computers use apt-cacher-ng as a proxy when available to download packages. When it&amp;rsquo;s unavailable either due to downtime, a bug, or me being on a different network, I want zypper to default to the standard repos.&lt;/p&gt;
+&lt;p&gt;I tried to find the proper way to do this on openSUSE. I asked on reddit and telegram, but found no reasonable solutions. I tried creating a transparent caching proxy with squid and some iptables rules, but due to zypper downloading from multiple repositories simultaneously, it needed a lot of hacks to cache the rpms properly. I wasn&amp;rsquo;t willing to risk a duct-taped together solution that could break any day. I tried writing a service for libzypp, but found the documentation unclear and lacking useful examples. Finally, I found a solution so simple I&amp;rsquo;m surprised I haven&amp;rsquo;t seen it published elsewhere.&lt;/p&gt;
+&lt;p&gt;After playing with this for a few months on and off I wondered what the spec actually requires of a &lt;code&gt;.repo&lt;/code&gt; file, and I found &lt;a href=&#34;https://www.suse.com/support/kb/doc/?id=000019926&#34;&gt;this gem on SUSE&amp;rsquo;s site&lt;/a&gt;. You can specify more than one &lt;code&gt;baseurl&lt;/code&gt;, and their order sets their priority. I looked at the &lt;a href=&#34;https://www.mankier.com/8/zypper#Commands-Supported_URI_formats&#34;&gt;manpage for zypper&lt;/a&gt; and found that a proxy can be defined in the URI.&lt;/p&gt;
+&lt;p&gt;The solution is as simple as editing the repo file and adding a &lt;code&gt;baseurl&lt;/code&gt; before the others pointing to apt-cacher-ng. For reference, here&amp;rsquo;s one of my &lt;code&gt;.repo&lt;/code&gt; files:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[repo-oss]
+name=openSUSE-Tumbleweed-Oss
+enabled=1
+autorefresh=1
+path=/
+baseurl=http://download.opensuse.org/tumbleweed/repo/oss/?proxy=10.42.0.1:3128
+baseurl=http://download.opensuse.org/tumbleweed/repo/oss/
+keeppackages=0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I have noticed the occasional 404 error in the proxy that shouldn&amp;rsquo;t be happening. The errors only seem to occur with metadata files and not the actual packages, so it&amp;rsquo;s serving its main purpose and saving me plenty of time and our cell connection to the internet plenty of bandwidth.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

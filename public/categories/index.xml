@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on spacemule.net</title>
+    <link>https://spacemule.net/categories/</link>
+    <description>Recent content in Categories on spacemule.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jan 2022 15:53:06 +0200</lastBuildDate><atom:link href="https://spacemule.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://spacemule.net/categories/linux/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      
+      <guid>https://spacemule.net/categories/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>
