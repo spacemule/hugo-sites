@@ -7,6 +7,7 @@ tags:
  - openSUSE
  - apt-cacher-ng
  - caching proxy
+ - zypper
 categories:
  - linux
 ---
@@ -33,3 +34,5 @@ keeppackages=0
 ```
 
 I have noticed the occasional 404 error in the proxy that shouldn't be happening. The errors only seem to occur with metadata files and not the actual packages, so it's serving its main purpose and saving me plenty of time and our cell connection to the internet plenty of bandwidth.
+
+This may work for Fedora, RHEL, and the other rpm distros, but I don't have the time or need to test it out right now.
