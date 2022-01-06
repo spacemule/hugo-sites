@@ -20,7 +20,7 @@ I tried to find the proper way to do this on openSUSE. I asked on reddit and tel
 
 After playing with this for a few months on and off I wondered what the spec actually requires of a `.repo` file, and I found [this gem on SUSE's site](https://www.suse.com/support/kb/doc/?id=000019926). You can specify more than one `baseurl`, and their order sets their priority. I looked at the [manpage for zypper](https://www.mankier.com/8/zypper#Commands-Supported_URI_formats) and found that a proxy can be defined in the URI.
 
-The solution is as simple as editing the repo file and adding a `baseurl` point to apt-cacher-ng  before the default `baseurl`. For reference, here's one of my `.repo` files:
+The solution is as simple as editing the repo file and adding a `baseurl` pointing to apt-cacher-ng  before the default `baseurl`. For reference, here's one of my `.repo` files:
 
 ```
 [repo-oss]
