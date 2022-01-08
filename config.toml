@@ -80,7 +80,7 @@ paginate = 5
         identifier = "tags"
         name = "Tags"
         url = "/tags"
-	weight = 110
+	weight = 155
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About Me"
@@ -101,4 +101,10 @@ paginate = 5
         name = "OBS Project"
         url = "https://build.opensuse.org/project/subprojects/home:spacemule"
         weight = 130
+      [[languages.en.menu.main]]
+        identifier = "linkedin"
+        name = "LinkedIn"
+        url = "https://www.linkedin.com/in/noah-kalish"
+        weight = 145
+
 
