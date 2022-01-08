@@ -12,7 +12,7 @@ paginate = 5
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
+  showMenuItems = 6
 
   # show selector to switch language
   showLanguageSelector = false
@@ -97,15 +97,15 @@ paginate = 5
         url = "/about"
 	weight = 150
      [[languages.en.menu.main]]
+        identifier = "links"
+        name = "Links"
+        url = "/links"
+	weight = 151
+     [[languages.en.menu.main]]
         identifier = "tags"
         name = "Tags"
         url = "/tags"
-	weight = 155
-     [[languages.en.menu.main]]
-        identifier = "zahava-recipes"
-        name = "Zahava's Recipes"
-        url = "https://yallaletseat.blogspot.com/"
-        weight = 156
+        weight = 155
      [[languages.en.menu.main]]
         identifier = "zahava"
         name = "Zahava is Cool"
