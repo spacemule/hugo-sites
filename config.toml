@@ -76,35 +76,39 @@ paginate = 5
         name = "Categories"
         url = "/categories"
 	weight = 100
-      [[languages.en.menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags"
-	weight = 155
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About Me"
-        url = "/about"
-	weight = 150
-      [[languages.en.menu.main]]
-        identifier = "github"
-        name = "Github"
-        url = "https://github.com/spacemule"
-	weight = 140
-      [[languages.en.menu.main]]
-        identifier = "zahava"
-        name = "Zahava is Cool"
-        url = "https://zahava-is.cool"
-	weight = 160
-      [[languages.en.menu.main]]
+     [[languages.en.menu.main]]
         identifier = "obs"
         name = "OBS Project"
         url = "https://build.opensuse.org/project/subprojects/home:spacemule"
         weight = 130
-      [[languages.en.menu.main]]
+     [[languages.en.menu.main]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/spacemule"
+	weight = 140
+     [[languages.en.menu.main]]
         identifier = "linkedin"
         name = "LinkedIn"
         url = "https://www.linkedin.com/in/noah-kalish"
         weight = 145
-
+     [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About Me"
+        url = "/about"
+	weight = 150
+     [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags"
+	weight = 155
+     [[languages.en.menu.main]]
+        identifier = "zahava-recipes"
+        name = "Zahava's Recipes"
+        url = "https://yallaletseat.blogspot.com/"
+        weight = 156
+     [[languages.en.menu.main]]
+        identifier = "zahava"
+        name = "Zahava is Cool"
+        url = "https://zahava-is.cool"
+	weight = 160
 
