@@ -1,16 +1,17 @@
----
-title: "Simple repository caching on openSUSE"
-date: 2022-01-04T15:53:06+02:00
-draft: false
-tags:
- - linux
- - openSUSE
- - apt-cacher-ng
- - caching proxy
- - zypper
-categories:
- - linux
----
++++
+title = "Simple repository caching on openSUSE"
+date = "2022-01-04T15:53:36+02:00"
+author = "Noah Kalish"
+authorTwitter = "" #do not include @
+cover = ""
+categories = ["linux",]
+tags = ["linux", "openSUSE", "apt-cacher-ng", "caching proxy", "zypper"]
+keywords = ["zypper", "openSUSE", "linux", "repositories", "apt-cacher", "apt-cacher-ng", "transparent proxy"]
+description = "A simple solution to use a repository cache that might not always be available"
+showFullContent = false
+readingTime = false
+draft = false
++++
 
 One of the things I missed the most from my Debian/Ubuntu days when I switched to openSUSE about a year ago was apt-cacher-ng with proxy autodiscovery. I had apt-cacher-ng running on one computer at home, and all of my containers, VMs, and laptops would use that proxy when they were on the home network. Even better, they'd seemlessly switch back to the default repos if the proxy was unavailable.
 
