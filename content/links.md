@@ -25,4 +25,4 @@ draft: false
 
  * [Cocaine & Rhinestones](https://cocaineandrhinestones.com/)
     
-     An amazing podcast about the history of country music by Taylor Mahan Coe. Feel free to skip the intros in the second season.
+     An amazing podcast about the history of country music by Tyler Mahan Coe. Feel free to skip the intros in the second season.
