@@ -12,7 +12,7 @@ showFullContent = false
 readingTime = false
 draft = false
 +++
-It's my belief that a country song is not good because it's good. It's good because it's a good country song. There is a Platonic ideal for a country song, and like Plato, the definition alludes me. While Steve Goodman may be crowned as king of the "perfect country and western song," I don't think it's right to bestow such an honored title in perpetuity. I also don't think it' s right that a novelty song and the misunderstood masterpiece *He Stopped Loving Her Today* should have to compete. It's just not fair to George. Yet, I still needed something to push me to right this wrong.
+It's my belief that a country song is not good because it's good. It's good because it's a good country song. There is a Platonic ideal for a country song, and like Plato, the definition alludes me. While Steve Goodman may be crowned as king of the "perfect country and western song," I don't think it's right to bestow such an honored title in perpetuity. I also don't think it' s right that *See the Big Man Cry* should even have to compete with a novelty song and *He Stopped Loving Her Today*. It's just not fair to Charlie. Yet, I still needed something to push me to right this wrong.
 
 On January 3, 2021, I was involved in a bicycle accident that tore my ACL and damaged my meniscus. I was presribed alternately Tramadex and Percocet for the pain of the recovery and reconstructive surgery. In the haze of pain killers, I used my time off from work to write the lyrics to a country song that I knew had to be written.
 
