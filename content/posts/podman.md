@@ -85,7 +85,7 @@ kube@zoggamule:~> curl localhost:10080
 </head>
 <body>
 <h1>Welcome to nginx!</h1>
-<p>If you see this page, the container with the nginx web server is 
+<p>If you see this page, the container with the nginx web server is
 successfully installed and working.</p>
 </body>
 </html>

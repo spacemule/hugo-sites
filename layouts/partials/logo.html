@@ -1,5 +1,5 @@
 <a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{else}}{{ $.Site.BaseURL }}{{ end }}">
-  <div class="logo"><img src="/logo.webp" style="height: 3ex">
+  <div class="logo"><img src="/logo.webp" style="height: 3ex; width: auto;">
     {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}Terminal{{ end }}
   </div>
 </a>

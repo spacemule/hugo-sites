@@ -6,11 +6,101 @@
     <description>Recent content in Tags on spacemule.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 15:53:06 +0200</lastBuildDate><atom:link href="https://spacemule.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://spacemule.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>containers</title>
+      <link>https://spacemule.net/tags/containers/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/containers/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://spacemule.net/tags/docker/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/docker/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://spacemule.net/tags/linux/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Open Build Service</title>
+      <link>https://spacemule.net/tags/open-build-service/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/open-build-service/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>openSUSE</title>
+      <link>https://spacemule.net/tags/opensuse/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/opensuse/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>podman</title>
+      <link>https://spacemule.net/tags/podman/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://spacemule.net/tags/podman/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>country music</title>
+      <link>https://spacemule.net/tags/country-music/</link>
+      <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/country-music/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://spacemule.net/tags/music/</link>
+      <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/music/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>songwriting</title>
+      <link>https://spacemule.net/tags/songwriting/</link>
+      <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
+      
+      <guid>https://spacemule.net/tags/songwriting/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>apt-cacher-ng</title>
       <link>https://spacemule.net/tags/apt-cacher-ng/</link>
-      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
       <guid>https://spacemule.net/tags/apt-cacher-ng/</guid>
       <description></description>
@@ -20,7 +110,7 @@
     <item>
       <title>caching proxy</title>
       <link>https://spacemule.net/tags/caching-proxy/</link>
-      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
       <guid>https://spacemule.net/tags/caching-proxy/</guid>
       <description></description>
@@ -28,21 +118,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://spacemule.net/tags/linux/</link>
-      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
+      <title>zypper</title>
+      <link>https://spacemule.net/tags/zypper/</link>
+      <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
-      <guid>https://spacemule.net/tags/linux/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>openSUSE</title>
-      <link>https://spacemule.net/tags/opensuse/</link>
-      <pubDate>Tue, 04 Jan 2022 15:53:06 +0200</pubDate>
-      
-      <guid>https://spacemule.net/tags/opensuse/</guid>
+      <guid>https://spacemule.net/tags/zypper/</guid>
       <description></description>
       <content></content>
     </item>

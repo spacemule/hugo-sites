@@ -12,3 +12,5 @@ My interests include Linux system administration, containerization, automation, 
 Please enjoy the photograph of my dog, Maya, on the right.
 
 {{< image src="../maya.webp" title="Maya" style="border-radius: 15px; float: right; width: 40%; height: auto; margin-left: 15px; margin-top: 15px; margin-bottom: 15px;" >}}
+
+You may contact me at an email composed of my first name '@' this domain name.

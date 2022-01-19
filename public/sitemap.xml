@@ -2,36 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://spacemule.net/tags/apt-cacher-ng/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
-  </url><url>
-    <loc>https://spacemule.net/tags/caching-proxy/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
-  </url><url>
     <loc>https://spacemule.net/categories/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/posts/podman/</loc>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/containers/</loc>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/docker/</loc>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/tags/linux/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/categories/linux/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/open-build-service/</loc>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/tags/opensuse/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/podman/</loc>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/posts/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
-  </url><url>
-    <loc>https://spacemule.net/posts/repo-cache/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/tags/</loc>
-    <lastmod>2022-01-04T15:53:06+02:00</lastmod>
+    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/country-music/</loc>
+    <lastmod>2022-01-07T14:41:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/categories/country-music/</loc>
+    <lastmod>2022-01-07T14:41:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/music/</loc>
+    <lastmod>2022-01-07T14:41:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/songwriting/</loc>
+    <lastmod>2022-01-07T14:41:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/posts/these-bars/</loc>
+    <lastmod>2022-01-07T14:41:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/apt-cacher-ng/</loc>
+    <lastmod>2022-01-04T15:53:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/caching-proxy/</loc>
+    <lastmod>2022-01-04T15:53:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/posts/repo-cache/</loc>
+    <lastmod>2022-01-04T15:53:36+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/tags/zypper/</loc>
+    <lastmod>2022-01-04T15:53:36+02:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/about/</loc>
+  </url><url>
+    <loc>https://spacemule.net/links/</loc>
   </url>
 </urlset>
