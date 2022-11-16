@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Containerizing My Home Server :: spacemule.net</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="One of the best parts of maintaining a hobby server is setting it up. It’s fun to get everything working and figure out all of the quirks of the various pieces of software that have to work together on there. Once it’s working well, it’s a joy to let it sit, auto-update and handle its business for you. Conversely, the worst part of maintaining a hobby server is upgrading the underlying OS to a new release or migrating it to a new platform or machine." />
+<meta name="keywords" content="linux, openSUSE, containers, docker, podman" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://spacemule.net/posts/podman/" />
+
+
+
+
+<link rel="stylesheet" href="https://spacemule.net/assets/style.css">
+
+  <link rel="stylesheet" href="https://spacemule.net/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://spacemule.net/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://spacemule.net/../favicon.ico">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Containerizing My Home Server">
+<meta property="og:description" content="One of the best parts of maintaining a hobby server is setting it up. It’s fun to get everything working and figure out all of the quirks of the various pieces of software that have to work together on there. Once it’s working well, it’s a joy to let it sit, auto-update and handle its business for you. Conversely, the worst part of maintaining a hobby server is upgrading the underlying OS to a new release or migrating it to a new platform or machine." />
+<meta property="og:url" content="https://spacemule.net/posts/podman/" />
+<meta property="og:site_name" content="spacemule.net" />
+
+  <meta property="og:image" content="https://spacemule.net">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+  <meta property="article:section" content="linux" />
+
+
+  <meta property="article:published_time" content="2022-01-13 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+<script async defer data-website-id="704fd120-20c5-41fe-83b4-e2b6c2cd7424" src="https://lytics.spacemule.net/umami.js"></script>
+
+
+</head>
+<body class="green">
+
+
+<div class="container full headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo"><img src="/logo.webp" style="height: 3ex; width: auto;">
+    spacemule.net
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/categories">Categories</a></li>
+        
+      
+        
+          <li><a href="https://build.opensuse.org/project/subprojects/home:spacemule">OBS Project</a></li>
+        
+      
+        
+          <li><a href="https://github.com/spacemule">Github</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/noah-kalish">LinkedIn</a></li>
+        
+      
+        
+          <li><a href="/about">About Me</a></li>
+        
+      
+        
+          <li><a href="/links">Links</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="https://zahava-is.cool">Zahava is Cool</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/categories">Categories</a></li>
+      
+    
+      
+        <li><a href="https://build.opensuse.org/project/subprojects/home:spacemule">OBS Project</a></li>
+      
+    
+      
+        <li><a href="https://github.com/spacemule">Github</a></li>
+      
+    
+      
+        <li><a href="https://www.linkedin.com/in/noah-kalish">LinkedIn</a></li>
+      
+    
+      
+        <li><a href="/about">About Me</a></li>
+      
+    
+      
+        <li><a href="/links">Links</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="https://zahava-is.cool">Zahava is Cool</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://spacemule.net/posts/podman/">Containerizing My Home Server</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2022-01-13
+        
+      </span>
+    
+    
+      <span class="post-author">:: Noah Kalish</span>
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://spacemule.net/tags/linux/">linux</a>&nbsp;
+    
+    #<a href="https://spacemule.net/tags/opensuse/">openSUSE</a>&nbsp;
+    
+    #<a href="https://spacemule.net/tags/containers/">containers</a>&nbsp;
+    
+    #<a href="https://spacemule.net/tags/docker/">docker</a>&nbsp;
+    
+    #<a href="https://spacemule.net/tags/podman/">podman</a>&nbsp;
+    
+    #<a href="https://spacemule.net/tags/open-build-service/">Open Build Service</a>&nbsp;
+    
+  </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="the-need-for-change">The need for change<a href="#the-need-for-change" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>One of the best parts of maintaining a hobby server is setting it up. It&rsquo;s fun to get everything working and figure out all of the quirks of the various pieces of software that have to work together on there. Once it&rsquo;s working well, it&rsquo;s a joy to let it sit, auto-update and handle its business for you. Conversely, the worst part of maintaining a hobby server is upgrading the underlying OS to a new release or migrating it to a new platform or machine. I was without CalDAV and CardDAV for about six months because I was too busy to get around to migrating my old data to my new server when I migrated to a better machine.</p>
+<p>Choosing to containerize was a decision based on curiousity, hardware limitations, and a desire to learn something new. My initial set up in Israel was my wife&rsquo;s old laptop. With an amazing 4 gigs of RAM, a 100Mbps network card, and a screaming fast dual core AMD E1-1500, it was not a machine that could handle virtualization. My current, new-to-me shiny quad-core i5-2310 with 8 gigs of RAM, 2 SSDs and 2 spinning disks each in a BTRFS raid1 configuration is Watson compared to that old laptop. It&rsquo;s not modern. It also rarely shows a system load above 0.5, so why invest in more? Still, neither machine can handle the number of VMs I would like for some fun at home. I had a choice between containerization and bare metal, and I chose the tinkerer&rsquo;s option.</p>
+<p>I am used to running a home server. I&rsquo;ve done it on and off since around 2010. I started by just installing everything on there, locking it down, and never backing up. I learned that VMs are your friend after about a year. After many close calls without any serious data loss, I integrated duplicity with an offsite backup sometime around 2013. Things stayed like that for a while until I discovered LXD. Canonical&rsquo;s wrapper around LXC makes containers that work like VMs. It&rsquo;s lightweight and easy to use, but I found the containers to be less portable than VMs. You can use cloud-config to create a container there that just works, but its definition is still tied to the underlying hardware. LXD feels like a crutch to bring VM-style administration to the world of containerization. It works, it&rsquo;s brilliant, but it&rsquo;s stuck between two worlds. Try migrating an LXD image from one mserver to another. I&rsquo;ve done it, but it&rsquo;s not as simple as migrating a VM where all the hardware is abstracted away. I decided if I was going to do containerization, I&rsquo;d do it right, so I looked into learning about Docker and ended up settling on using podman on my server.</p>
+<h2 id="my-solution">My solution<a href="#my-solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Since nothing on my server needs 24/7 availability, I prefer to apply patches and upgrades automatically and fix things that break when they break. MicroOS from openSUSE handles this for the base OS. It has never broken for me, and if it does, it has automatic rollbacks so I don&rsquo;t usually have to deal with it. There&rsquo;s a neat feature in podman that handles upgrades for containers: <code>podman auto-update</code>. Run this command, and any container labelled with <code>io.containers.autoupdate=image</code> will pull a new image and restart if there&rsquo;s an update. There&rsquo;s also a systemd timer that automates this and (at least on openSUSE) can be enabled with <code>systemctl [--user] enable podman-auto-update.timer</code>. For anyone looking to switch from Docker, podman has the command <code>generate systemd. This generates a systemd service file that can be installed to run the containers as system services. If you want them running when the user is not logged in, you'll have to </code>enable-linger` once on the account running the containers.</p>
+<p>Here are the steps:</p>
+<pre><code>1. Once for each account that needs to run containers while not logged in run `loginctl enable-linger`. You may need to do this as root, then it's `loginctl enable-linger $NAME_OF_USER_TO_ENABLE`.
+2. Enable auto-updates if desired---also once per account: `systemctl --user enable podman-auto-update.timer`.
+3. Start the container or pod.
+4. Create a systemd service file for the container or pod: `podman generate systemd --files --new --name $NAME_OF_CONTAINER_OR_POD`
+5. Move the service files to `$HOME/.config/systemd/user/`
+6. Reload the service files: `systemctl --user daemon-reload`
+7. Enable the service: `systemctl --user enable [--now] $SERVICE_FILE_NAME`
+</code></pre>
+<p>Here&rsquo;s a breakdown of the above for running nginx as a user named &ldquo;kube&rdquo;:</p>
+<pre><code>kube@zoggamule:~&gt; podman ps -a
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+kube@zoggamule:~&gt; loginctl enable-linger #You only ever need to do this once per account
+kube@zoggamule:~&gt; systemctl --user enable podman-auto-update.timer # Likewise, once per account here
+Created symlink /home/kube/.config/systemd/user/timers.target.wants/podman-auto-update.timer → /usr/lib/systemd/user/podman-auto-update.timer.
+kube@zoggamule:~&gt; podman run -d --rm --label io.containers.autoupdate=image --name nginx -p 10080:80 registry.opensuse.org/opensuse/nginx
+Trying to pull registry.opensuse.org/opensuse/nginx:latest...
+Getting image source signatures
+Copying blob 0507b53fa0e9 skipped: already exists
+Copying blob 2c6dcd4bd9f9 done
+Copying config 9ddf22c9a7 done
+Writing manifest to image destination
+Storing signatures
+f1f2cb7f91f449695ea6bead6bedbb1c90e3cc40b831e044267367685f012bed
+kube@zoggamule:~&gt; podman ps -a
+CONTAINER ID  IMAGE                                        COMMAND          CREATED         STATUS             PORTS                  NAMES
+f1f2cb7f91f4  registry.opensuse.org/opensuse/nginx:latest  /usr/sbin/nginx  46 minutes ago  Up 46 minutes ago  0.0.0.0:10080-&gt;80/tcp  nginx
+kube@zoggamule:~&gt; podman generate systemd --new --files --name nginx
+/home/kube/container-nginx.service
+kube@zoggamule:~&gt; ls
+bin  container-nginx.service
+kube@zoggamule:~&gt; mkdir -p .config/systemd/user
+kube@zoggamule:~&gt; mv container-nginx.service ~/.config/systemd/user/
+kube@zoggamule:~&gt; systemctl --user daemon-reload
+kube@zoggamule:~&gt; systemctl --user enable --now container-nginx.service
+Created symlink /home/kube/.config/systemd/user/default.target.wants/container-nginx.service → /home/kube/.config/systemd/user/container-nginx.service.
+kube@zoggamule:~&gt; podman ps -a
+CONTAINER ID  IMAGE                                        COMMAND          CREATED        STATUS            PORTS                  NAMES
+1226a35e009d  registry.opensuse.org/opensuse/nginx:latest  /usr/sbin/nginx  7 seconds ago  Up 7 seconds ago  0.0.0.0:10080-&gt;80/tcp  nginx
+kube@zoggamule:~&gt; systemctl --user restart container-nginx.service
+kube@zoggamule:~&gt; podman ps -a
+CONTAINER ID  IMAGE                                        COMMAND          CREATED        STATUS            PORTS                  NAMES
+4c47fb5ef7c0  registry.opensuse.org/opensuse/nginx:latest  /usr/sbin/nginx  2 seconds ago  Up 2 seconds ago  0.0.0.0:10080-&gt;80/tcp  nginx
+kube@zoggamule:~&gt; curl localhost:10080
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+&lt;style&gt;
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+&lt;p&gt;If you see this page, the container with the nginx web server is
+successfully installed and working.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+kube@zoggamule:~&gt; systemctl --user disable --now container-nginx.service
+Removed /home/kube/.config/systemd/user/default.target.wants/container-nginx.service.
+</code></pre><h2 id="the-changes">The changes<a href="#the-changes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The main change is organizational. Rather than having a mess of files in <code>/etc/</code> and data in <code>/var/</code>, I put all of my data and configuration for all of my containers in one directory with a directory named for each service. For example, my analytics service, umami has a directory with environment files and database storage for the two containers it uses. The one exception are files served by my webserver. Nextcloud gets a <code>nextcloud/</code> folder that holds its database data and environment files, but to make my life easier, I put its html directory in another directory with all of my other sites' web directories. This simplifies the mounts on my nginx container.</p>
+<p>The other big change is I try to make everything as simple as possible. I have one template for creating a server block for a new subdomain on nginx. I try to keep it simple so that I can have a new service up in minutes. Just pull the image, create the directories, run it, and copy the config file for the web server. The only part that requires any thought is generating the ssl certificats. I still need to read the docs at <a href="https://acme.sh">acme.sh</a> every time I do that. The advantage to keeping things simple is that even if something won&rsquo;t migrate easily for whatever reason, it won&rsquo;t be hard to recreate and I&rsquo;ll never go another 6 months without a calendar.</p>
+<p>The last <em>major</em> change I had to make to my workflow was dealing with config files. I always hated tweaking config files to get things working on a fresh install. Most containers I&rsquo;ve worked with have their configs set to sane defaults and allow overrides via environment variables. This simplifies setup considerably. Instead of a config file, I now keep an environment file with <em>only</em> my tweaks in it. It saves the trouble of searching through a default file for the right option, and really makes it clear which changes I made to the config if I&rsquo;m too lazy to set up version control.</p>
+<p>I don&rsquo;t use docker compose. Init systems work and do what they do well, so I stick with that. Supposedly, docker-compose works with podman now. I have not tried it because I don&rsquo;t see the need. Anytime a service is offered as a docker-compose file, I simply make a new pod, put the containers into the pod manually, and then run <code>podman generate systemd</code> on the pod. Sometimes the service files need to be edited to make sure things load in the right order. Simply modify the <code>Before=</code>, <code>After=</code>, <code>Wants=</code>, or other relevant lines to your needs.</p>
+<p>Starting services within a container is refreshingly different than from on a VM. I have a container running SSH that&rsquo;s used as a jump host. Instead of a calling a cryptic init script or relying on a systemd service file somewhere that&rsquo;s doing who knows what, it simply runs <code>/usr/sbin/sshd -D -f /sshd/sshd_config -p 2222 -e</code>. It&rsquo;s simple to understand what it&rsquo;s doing, and it&rsquo;s easy to change to fit my needs exactly.</p>
+<p>Version control is so much easier. I am working on reorganizing my files and cleaning up some of the systemd service files so they don&rsquo;t contain any sensitive information. Once that&rsquo;s done, I&rsquo;m putting my server&rsquo;s setup on Github. Backing up data is important, but sometimes the hardest part of a restore is the infrastructure. With everything containerized, I just need a host that can run the containers, my data, and the scripts to start them. My server ran out of disk space because I accidentally had the container images stored on the wrong partition. I had to completely tear down all of my containers and reset podman. To my surprise, once I set the new location and started my systemd services, everything worked just fine. Although it was a bit slow to start as all of the images needed to be downloaded, everything started perfectly and picked up where it left off. It was as easy as migrating a VM. Had I used volume storage, this would not have been the case, but more on that later.</p>
+<p>Custom containers initially seem like a pain, but they&rsquo;re worth it. I used to build mine on a local machine until I learned how to use the Open Build Service (OBS) at <a href="https://build.opensuse.org">build.opensuse.org</a>. Instead of fighting someone else&rsquo;s work, I get exactly what I want. One of my next posts will be a tutorial using the OBS.</p>
+<h2 id="errata">Errata<a href="#errata" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Initially, I followed tutorials, how-tos, and readmes to the last detail. I used container volumes for storage because that&rsquo;s what everyone else seemed to be doing. These are obnoxiously abstracted. They are easy to forget about after a container has outlived its useful life, and they add complexity to a lot of common tasks. Docker&rsquo;s documentation states that volumes are easier to backup or migrate than bind-mounted host directories, and then provides no proof of this fact. In reality, bind-mounting a host directory to a container has perfectly good performance and allows for easier maintainenance. For example, my nginx configs are in a system directory that&rsquo;s mounted on my nginx container. I can edit the files with vim on the host, or I can mount the directory on my laptop and edit the files in any text editor. I can also mount subdirectories of one container&rsquo;s bind mounts to another container without needing to expose the entire mount. I would not have this flexibility with a volume. The same goes for backups. (I&rsquo;ve moved from duplicity to restic, by the way.) I don&rsquo;t have to create a container to go mount all my volumes and back them up. I simply place directories that need to be backed up in one main directory and back that up daily. I have not found a compelling reason to use volumes over bind mounts. The system reset I mentioned above was not the first time I did that. When I migrated from the laptop to the i5, Nextcloud was storing its data in volumes. It took me 6 months to get it back up and running because I didn&rsquo;t want to deal with getting the data out of those volumes and onto the new host. Had I used bind-mounted directories, <code>rsync -avz</code> would have easily copied all the necessary data and put my site back up in minutes instead of months.</p>
+<p>If you need to move your container storage to a new location, you&rsquo;ll lose any volumes when you run <code>podman system reset</code>. This is another reason that I avoid storing most things in volumes. I have two exceptions: Data that doesn&rsquo;t need be backed up or moved in a migration such as a redis cache, and volumes automatically created by containers. Occasionally, you&rsquo;ll find a container that overzealously creates volumes or has a volume with an incorrect mount point in its dockerfile. In these cases, I just assign a volume to the mount to keep it out of my hair. If you don&rsquo;t assign a named volume, your system will become cluttered with new, randomly named volumes every time the container starts.</p>
+<p>Testing migrations is dead simple. Simply copy a container&rsquo;s mounts to a new location and see if it can work by running it with the mounts changed. If it does, then it&rsquo;s easily migrated to a new host. There are more elegant solutions to this, but they&rsquo;re overkill for a home server.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://spacemule.net/posts/these-bars/">
+                <span class="button__text">These Bars</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  spacemule.net: Delivering goods across inter-dimensional boundaries
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://spacemule.net/assets/main.js"></script>
+<script src="https://spacemule.net/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
