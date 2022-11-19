@@ -66,7 +66,7 @@ To be clear, what I want is to have my computers use apt-cacher-ng as a proxy wh
 
 
 
-<script async defer data-website-id="704fd120-20c5-41fe-83b4-e2b6c2cd7424" src="https://lytics.spacemule.net/umami.js"></script>
+<script async defer data-website-id="78b01028-e8a0-494b-b941-3276e25615d5" src="https://lytics.spacemule.net/umami.js"></script>
 
 
 </head>
@@ -226,7 +226,7 @@ To be clear, what I want is to have my computers use apt-cacher-ng as a proxy wh
 <p>I tried to find the proper way to do this on openSUSE. I asked on reddit and telegram, but I found no reasonable solutions. I tried creating a transparent caching proxy with squid and some iptables rules, but due to zypper downloading from multiple repositories simultaneously, it needed a lot of hacks to cache the rpms properly. I wasn&rsquo;t willing to risk a duct-taped together solution that could break any day. I tried writing a service for libzypp, but found the documentation unclear and lacking useful examples. Finally, I found a solution so simple I&rsquo;m surprised I haven&rsquo;t seen it published elsewhere.</p>
 <p>After playing with this for a few months on and off I wondered what the spec actually requires of a <code>.repo</code> file, and I found <a href="https://www.suse.com/support/kb/doc/?id=000019926">this gem on SUSE&rsquo;s site</a>. You can specify more than one <code>baseurl</code>, and their order sets their priority. I looked at the <a href="https://www.mankier.com/8/zypper#Commands-Supported_URI_formats">manpage for zypper</a> and found that a proxy can be defined in the URI.</p>
 <p>The solution is as simple as editing the repo file and adding a <code>baseurl</code> pointing to apt-cacher-ng  before the default <code>baseurl</code>. For reference, here&rsquo;s one of my <code>.repo</code> files:</p>
-<pre><code>[repo-oss]
+<pre tabindex="0"><code>[repo-oss]
 name=openSUSE-Tumbleweed-Oss
 enabled=1
 autorefresh=1

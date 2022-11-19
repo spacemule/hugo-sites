@@ -64,7 +64,7 @@
 
 
 
-<script async defer data-website-id="704fd120-20c5-41fe-83b4-e2b6c2cd7424" src="https://lytics.spacemule.net/umami.js"></script>
+<script async defer data-website-id="78b01028-e8a0-494b-b941-3276e25615d5" src="https://lytics.spacemule.net/umami.js"></script>
 
 
 </head>
@@ -237,7 +237,7 @@
 7. Enable the service: `systemctl --user enable [--now] $SERVICE_FILE_NAME`
 </code></pre>
 <p>Here&rsquo;s a breakdown of the above for running nginx as a user named &ldquo;kube&rdquo;:</p>
-<pre><code>kube@zoggamule:~&gt; podman ps -a
+<pre tabindex="0"><code>kube@zoggamule:~&gt; podman ps -a
 CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
 kube@zoggamule:~&gt; loginctl enable-linger #You only ever need to do this once per account
 kube@zoggamule:~&gt; systemctl --user enable podman-auto-update.timer # Likewise, once per account here
@@ -292,7 +292,7 @@ successfully installed and working.&lt;/p&gt;
 kube@zoggamule:~&gt; systemctl --user disable --now container-nginx.service
 Removed /home/kube/.config/systemd/user/default.target.wants/container-nginx.service.
 </code></pre><h2 id="the-changes">The changes<a href="#the-changes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>The main change is organizational. Rather than having a mess of files in <code>/etc/</code> and data in <code>/var/</code>, I put all of my data and configuration for all of my containers in one directory with a directory named for each service. For example, my analytics service, umami has a directory with environment files and database storage for the two containers it uses. The one exception are files served by my webserver. Nextcloud gets a <code>nextcloud/</code> folder that holds its database data and environment files, but to make my life easier, I put its html directory in another directory with all of my other sites' web directories. This simplifies the mounts on my nginx container.</p>
+<p>The main change is organizational. Rather than having a mess of files in <code>/etc/</code> and data in <code>/var/</code>, I put all of my data and configuration for all of my containers in one directory with a directory named for each service. For example, my analytics service, umami has a directory with environment files and database storage for the two containers it uses. The one exception are files served by my webserver. Nextcloud gets a <code>nextcloud/</code> folder that holds its database data and environment files, but to make my life easier, I put its html directory in another directory with all of my other sites&rsquo; web directories. This simplifies the mounts on my nginx container.</p>
 <p>The other big change is I try to make everything as simple as possible. I have one template for creating a server block for a new subdomain on nginx. I try to keep it simple so that I can have a new service up in minutes. Just pull the image, create the directories, run it, and copy the config file for the web server. The only part that requires any thought is generating the ssl certificats. I still need to read the docs at <a href="https://acme.sh">acme.sh</a> every time I do that. The advantage to keeping things simple is that even if something won&rsquo;t migrate easily for whatever reason, it won&rsquo;t be hard to recreate and I&rsquo;ll never go another 6 months without a calendar.</p>
 <p>The last <em>major</em> change I had to make to my workflow was dealing with config files. I always hated tweaking config files to get things working on a fresh install. Most containers I&rsquo;ve worked with have their configs set to sane defaults and allow overrides via environment variables. This simplifies setup considerably. Instead of a config file, I now keep an environment file with <em>only</em> my tweaks in it. It saves the trouble of searching through a default file for the right option, and really makes it clear which changes I made to the config if I&rsquo;m too lazy to set up version control.</p>
 <p>I don&rsquo;t use docker compose. Init systems work and do what they do well, so I stick with that. Supposedly, docker-compose works with podman now. I have not tried it because I don&rsquo;t see the need. Anytime a service is offered as a docker-compose file, I simply make a new pod, put the containers into the pod manually, and then run <code>podman generate systemd</code> on the pod. Sometimes the service files need to be edited to make sure things load in the right order. Simply modify the <code>Before=</code>, <code>After=</code>, <code>Wants=</code>, or other relevant lines to your needs.</p>

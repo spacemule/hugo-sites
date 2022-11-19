@@ -20,7 +20,7 @@ To be clear, what I want is to have my computers use apt-cacher-ng as a proxy wh
 &lt;p&gt;I tried to find the proper way to do this on openSUSE. I asked on reddit and telegram, but I found no reasonable solutions. I tried creating a transparent caching proxy with squid and some iptables rules, but due to zypper downloading from multiple repositories simultaneously, it needed a lot of hacks to cache the rpms properly. I wasn&amp;rsquo;t willing to risk a duct-taped together solution that could break any day. I tried writing a service for libzypp, but found the documentation unclear and lacking useful examples. Finally, I found a solution so simple I&amp;rsquo;m surprised I haven&amp;rsquo;t seen it published elsewhere.&lt;/p&gt;
 &lt;p&gt;After playing with this for a few months on and off I wondered what the spec actually requires of a &lt;code&gt;.repo&lt;/code&gt; file, and I found &lt;a href=&#34;https://www.suse.com/support/kb/doc/?id=000019926&#34;&gt;this gem on SUSE&amp;rsquo;s site&lt;/a&gt;. You can specify more than one &lt;code&gt;baseurl&lt;/code&gt;, and their order sets their priority. I looked at the &lt;a href=&#34;https://www.mankier.com/8/zypper#Commands-Supported_URI_formats&#34;&gt;manpage for zypper&lt;/a&gt; and found that a proxy can be defined in the URI.&lt;/p&gt;
 &lt;p&gt;The solution is as simple as editing the repo file and adding a &lt;code&gt;baseurl&lt;/code&gt; pointing to apt-cacher-ng  before the default &lt;code&gt;baseurl&lt;/code&gt;. For reference, here&amp;rsquo;s one of my &lt;code&gt;.repo&lt;/code&gt; files:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[repo-oss]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[repo-oss]
 name=openSUSE-Tumbleweed-Oss
 enabled=1
 autorefresh=1
