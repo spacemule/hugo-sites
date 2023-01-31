@@ -14,7 +14,7 @@ draft: false
 
      The finest street sign translations in the Middle East.
 
- * [Zahava is Cool](https://zahava-is.cool/)
+ * [Zahava is Cool](https://zahava-is-cool.com/)
 
      An applied tautology.
 

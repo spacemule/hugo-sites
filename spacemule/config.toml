@@ -109,6 +109,6 @@ paginate = 5
      [[languages.en.menu.main]]
         identifier = "zahava"
         name = "Zahava is Cool"
-        url = "https://zahava-is.cool"
+        url = "https://zahava-is-cool.com"
 	weight = 160
 
