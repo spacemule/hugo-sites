@@ -2,6 +2,7 @@ baseurl = "https://spacemule.net"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
+enableRobotsTXT = true
 
 [params]
   # dir name of your main content (default is `content/posts`).
