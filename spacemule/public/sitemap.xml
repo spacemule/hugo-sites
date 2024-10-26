@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://spacemule.net/posts/</loc>
+    <lastmod>2022-01-19T17:24:31+02:00</lastmod>
+  </url><url>
+    <loc>https://spacemule.net/</loc>
+    <lastmod>2022-01-19T17:24:31+02:00</lastmod>
+  </url><url>
     <loc>https://spacemule.net/categories/</loc>
     <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -27,12 +33,6 @@
     <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/tags/podman/</loc>
-    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://spacemule.net/posts/</loc>
-    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://spacemule.net/</loc>
     <lastmod>2022-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://spacemule.net/tags/</loc>

@@ -5,10 +5,10 @@
     <link>https://spacemule.net/tags/</link>
     <description>Recent content in Tags on spacemule.net</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://spacemule.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>containers</title>
+      <title>Containers</title>
       <link>https://spacemule.net/tags/containers/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -18,7 +18,7 @@
     </item>
     
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://spacemule.net/tags/docker/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -28,7 +28,7 @@
     </item>
     
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://spacemule.net/tags/linux/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>openSUSE</title>
+      <title>OpenSUSE</title>
       <link>https://spacemule.net/tags/opensuse/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -58,7 +58,7 @@
     </item>
     
     <item>
-      <title>podman</title>
+      <title>Podman</title>
       <link>https://spacemule.net/tags/podman/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -68,7 +68,7 @@
     </item>
     
     <item>
-      <title>country music</title>
+      <title>Country Music</title>
       <link>https://spacemule.net/tags/country-music/</link>
       <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
       
@@ -78,7 +78,7 @@
     </item>
     
     <item>
-      <title>music</title>
+      <title>Music</title>
       <link>https://spacemule.net/tags/music/</link>
       <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
       
@@ -88,7 +88,7 @@
     </item>
     
     <item>
-      <title>songwriting</title>
+      <title>Songwriting</title>
       <link>https://spacemule.net/tags/songwriting/</link>
       <pubDate>Fri, 07 Jan 2022 14:41:36 +0200</pubDate>
       
@@ -98,7 +98,7 @@
     </item>
     
     <item>
-      <title>apt-cacher-ng</title>
+      <title>Apt-Cacher-Ng</title>
       <link>https://spacemule.net/tags/apt-cacher-ng/</link>
       <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
@@ -108,7 +108,7 @@
     </item>
     
     <item>
-      <title>caching proxy</title>
+      <title>Caching Proxy</title>
       <link>https://spacemule.net/tags/caching-proxy/</link>
       <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
@@ -118,7 +118,7 @@
     </item>
     
     <item>
-      <title>zypper</title>
+      <title>Zypper</title>
       <link>https://spacemule.net/tags/zypper/</link>
       <pubDate>Tue, 04 Jan 2022 15:53:36 +0200</pubDate>
       
